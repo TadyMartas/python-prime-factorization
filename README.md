@@ -19,7 +19,7 @@ A simple Python program that finds the two prime factors of a number using trial
 Run the program:
 
 ```bash
-python main.py
+python prime_factorization.py
 ```
 
 Enter a number when prompted:
