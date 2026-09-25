@@ -1,64 +1,78 @@
-Python Prime Factorization
+# Python Prime Factorization
 
-A simple Python program that finds the two factors of a number using trial division.
+A simple Python program that finds the two prime factors of a number using trial division.
 
-The program calculates the square root of the input number and only checks possible factors up to this limit. Once a factor is found, the second factor is calculated by division.
+## Features
 
-How it works
+* Finds prime factors using trial division
+* Limits the search to √n
+* Measures execution time
+* Displays the current number being tested
+* Automatically calculates the second factor
 
-For a number:
+## Requirements
 
-n = p × q
+* Python 3.x
 
-at least one factor must satisfy:
+## Usage
 
-p ≤ √n
+Run the program:
 
-Therefore, the program only needs to test possible factors from 2 to √n.
+```bash
+python main.py
+```
 
-Example
+Enter a number when prompted:
 
-Input:
-
+```text
 Insert number n: 1000000028000000147
+```
 
-The program searches up to:
+Example output:
 
-√n ≈ 1,000,000,014
-
-and finds:
+```text
+Finding factor until √n = 1,000,000,014
+----------------------------------------
 
 ✓ Factor found!
 p = 1,000,000,007
 q = 1,000,000,021
 
 Time: 18.54 seconds
-Technologies
-Python
-math
-time
-Features
-Accepts an integer from the user
-Calculates the search limit using math.isqrt()
-Searches for a factor using trial division
-Calculates the second factor automatically
-Measures execution time
-Displays the currently tested number
-Limitations
+```
 
-This program is intended for learning and demonstration purposes.
+## How it works
 
-Trial division becomes extremely slow for large numbers. This is especially relevant to cryptography, where numbers can be hundreds or thousands of bits long.
+The program checks possible factors from `2` up to `√n`.
 
-The program is not intended for breaking real cryptographic keys.
+If a factor is found, the second factor is calculated by dividing `n` by the first factor.
 
-Changelog
-v1.0
-Added prime factorization using trial division
-Added square-root search limit
-Added execution time measurement
-Added current candidate display
-Added automatic calculation of the second factor
-License
+For example:
 
-This project is for educational purposes.
+```text
+n = p × q
+```
+
+At least one factor must satisfy:
+
+```text
+p ≤ √n
+```
+
+This allows the program to stop searching after reaching the square root of `n`.
+
+## Limitations
+
+The program uses simple trial division, so execution time increases significantly as the input number gets larger.
+
+This project is intended for educational purposes and demonstrates the basic principles of integer factorization.
+
+## Changelog
+
+### v1.0
+
+* Added prime factorization using trial division
+* Added √n search limit
+* Added execution time measurement
+* Added current candidate display
+* Added automatic calculation of the second factor
